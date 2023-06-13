@@ -1,157 +1,43 @@
-import React from 'react'
-import { SafeAreaView, View, Text, TouchableOpacity,  Image } from 'react-native'
-
-import { MaterialIcons } from '@expo/vector-icons'
+import React from 'react';
+import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 
 const HomeScreen = ({ navigation }) => {
   return (
-			
-    <SafeAreaView
-      style={{
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        backfaceVisibility: 2,
-        backgroundColor: '#FAFAD2',
-        margin: 0,
-			padding: 0,
-		
-      }}
-      
-    >
-      
-      <TouchableOpacity
-            style={{
-              margin: 20,
-              marginTop: 5,
-              borderColor: '#ddd',
-              marginRight:350,
-              borderRadius: 10,
-              paddingHorizontal: 100,
-              paddingVertical: 10
-            }}
-           
-          >
-      <Image
-              source={require("../../../assets/images/banco.png")}
-              style={{
-                marginTop: 5,
-                height: 50,
-                width: 50
-              }}
-            />
-             </TouchableOpacity>
-             
-             <TouchableOpacity
-            style={{
-              margin: 20,
-              marginTop: 5,
-              borderColor: '#ddd',
-              marginRight:350,
-              borderRadius: 10,
-              paddingHorizontal: 100,
-              paddingVertical: 10
-            }}
-           
-          >
-     
-      <Image
-              source={require("../../../assets/images/notificacao.png")}
-              style={{
-                marginLeft: 700,
-                marginTop: -90,
-                height: 50,
-                width: 50
-              }}
-            />
-            
-             </TouchableOpacity>
-             <TouchableOpacity
-        style={{
-          backgroundColor: '#000080',
-          padding: 20,
-          width: '90%',
-          borderRadius: 10,
-          marginBottom: 0,
-          flexDirection: 'row',
-          justifyContent: 'space-between'
-        }}
-        onPress={() => navigation.navigate('Notas')}
-      >
-        
-        
-        <Text
-          style={{
-            color: 'white',
-            fontSize: 18,
-            textAlign: 'center',
-            fontWeight: 'bold'
-          }}
-        >
-          Saúde
-        </Text>
-
-        <MaterialIcons
-          name="login"
-          size={20}
-          color={'#fff'}
-          style={{ marginRight: 5 }}
-        />
+    <View style={styles.container}>
+      <Text style={styles.title}>Bem-vindo ao App de lanches!</Text>
+      <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Login')}>
+        <Text style={styles.buttonText}>Fazer login</Text>
       </TouchableOpacity>
+    </View>
+    
+  );
+};
 
-       <View
-        style={{
-          marginTop: 500
-        }}
-      >
-        
-        <Text
-          style={{
-            marginTop: 50,
-            fontWeight: 'bold',
-            fontSize: 40,
-            color: '#1C1C1C'
-          }}
-        >
-          Healthy Life
-        </Text>
-      </View>
-      
-      <TouchableOpacity
-        style={{
-          backgroundColor: '#000080',
-          padding: 20,
-          width: '90%',
-          borderRadius: 10,
-          marginBottom: 100,
-          flexDirection: 'row',
-          justifyContent: 'space-between'
-        }}
-        onPress={() => navigation.navigate('Login')}
-      >
-        
-        
-        <Text
-          style={{
-            color: 'white',
-            fontSize: 18,
-            textAlign: 'center',
-            fontWeight: 'bold'
-          }}
-        >
-          Entrar
-        </Text>
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+    padding: 16,
+    backgroundColor:'#87CEFA'  
+  },
+  title: {
+    fontSize: 24,
+    fontWeight: 'bold',
+    marginBottom: 32,
+  },
+  button: {
+    backgroundColor: '#8B0000',
+    padding: 16,
+    borderRadius: 8,
+  },
+  buttonText: {
+    color: '#fff',
+    fontSize: 18,
+    fontWeight: 'bold',
+    textAlign: 'center',
+  },
+  
+});
 
-        <MaterialIcons
-          name="login"
-          size={20}
-          color={'#fff'}
-          style={{ marginRight: 5 }}
-        />
-      </TouchableOpacity>
-      
-    </SafeAreaView>
-  )
-}
-
-export default HomeScreen
+export default HomeScreen;

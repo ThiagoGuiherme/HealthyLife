@@ -31,7 +31,7 @@ const RegisterScreen = ({ navigation }) => {
       style={{
         display: 'flex',
         justifyContent: 'center',
-        backgroundColor: '#FAFAD2'
+        backgroundColor: '#87CEEB'
       }}
     >
       <ScrollView
@@ -46,7 +46,7 @@ const RegisterScreen = ({ navigation }) => {
           }}
         >
           <Image
-            source={require("../../../assets/images/regis.jpg")}
+            source={require("../../../assets/images/food.jpg")}
             style={{
               height: 350,
               width: 350,
@@ -164,6 +164,11 @@ const RegisterScreen = ({ navigation }) => {
         />
 
         <CustomInput
+          label={'Informe aqui o seu gênero ...'}
+          keyboardType={'default'}
+        />
+
+        <CustomInput
           label={'Informe aqui o seu nome de usuário ...'}
           keyboardType={'default'}
         />
@@ -238,6 +243,7 @@ const RegisterScreen = ({ navigation }) => {
         />
 
         <CustomButton
+          
           label={'Registrar'}
           onPress={() => navigation.navigate('Home')}
         />

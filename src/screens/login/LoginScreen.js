@@ -26,15 +26,15 @@ const LoginScreen = ({ navigation }) => {
       style={{
         display: 'flex',
         justifyContent: 'center',
-        paddingVertical: 50,
-        backgroundColor: '#FFFACD'
+        paddingVertical: 100,
+        backgroundColor: '#87CEFA'
       }}
     >
       <View style={{ paddingHorizontal: 25 }}>
         <Text
           style={{
-            fontSize: 28,
-            fontWeight: '500',
+            fontSize: 30,
+            fontWeight: '600',
             color: '#000080',
             marginBottom: 30
           }}
@@ -48,7 +48,7 @@ const LoginScreen = ({ navigation }) => {
               name="alternate-email"
               size={20}
               color={'#000080'}
-              style={{ marginRight: 5 }}
+              style={{ marginRight: 10 }}
             />
           }
           keyboardType={'email-address'}
@@ -70,6 +70,7 @@ const LoginScreen = ({ navigation }) => {
         />
 
         <CustomButton
+        e
           label={'Login'}
           onPress={() => navigation.navigate('Home')}
         />
@@ -82,6 +83,26 @@ const LoginScreen = ({ navigation }) => {
         >
           Ou logar com...
         </Text>
+
+        <View
+          style={{
+            alignItems: 'center'
+          }}
+        >
+          <Image
+            source={require("../../../assets/images/lanche.jpg")}
+            style={{
+              height: 300,
+              width: 350,
+              marginVertical: -400,
+              transform: [
+                {
+                  rotate: '5deg'
+                }
+              ]
+            }}
+          />
+        </View>
 
         <View
           style={{
